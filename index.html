@@ -1,0 +1,285 @@
+<!DOCTYPE HTML><!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+    <meta http-equiv="content-type" charset="utf-8" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+     
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="themes/estilos.css" />
+    
+        
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js?1b636-1354269188"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+    <link rel="stylesheet" href="style.css">
+        
+         <!--video1--> 
+        <script> function scale( width, height, padding, border ) {
+    var scrWidth = $( window ).width() - 30,
+        scrHeight = $( window ).height() - 30,
+        ifrPadding = 2 * padding,
+        ifrBorder = 2 * border,
+        ifrWidth = width + ifrPadding + ifrBorder,
+        ifrHeight = height + ifrPadding + ifrBorder,
+        h, w;
+
+    if ( ifrWidth < scrWidth && ifrHeight < scrHeight ) {
+        w = ifrWidth;
+        h = ifrHeight;
+    } else if ( ( ifrWidth / scrWidth ) > ( ifrHeight / scrHeight ) ) {
+        w = scrWidth;
+        h = ( scrWidth / ifrWidth ) * ifrHeight;
+    } else {
+        h = scrHeight;
+        w = ( scrHeight / ifrHeight ) * ifrWidth;
+    }
+
+    return {
+        'width': w - ( ifrPadding + ifrBorder ),
+        'height': h - ( ifrPadding + ifrBorder )
+    };
+};
+        </script>
+    <script> $( document ).on( "pageinit", function() {
+    $( "#popupVideo iframe" )
+        .attr( "width", 0 )
+        .attr( "height", 0 );
+		  
+    $( "#popupVideo" ).on({
+        popupbeforeposition: function() {
+            var size = scale( 497, 298, 15, 1 ),
+                w = size.width,
+                h = size.height;
+
+            $( "#popupVideo iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+        },
+        popupafterclose: function() {
+            $( "#popupVideo iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );    
+             Froogaloop($('#player1')[0]).api('pause');
+        }
+    });
+});</script>
+         <!--/video1--> 
+        
+         <!--video2--> 
+         <script> function scale( width, height, padding, border ) {
+    var scrWidth = $( window ).width() - 30,
+        scrHeight = $( window ).height() - 30,
+        ifrPadding = 2 * padding,
+        ifrBorder = 2 * border,
+        ifrWidth = width + ifrPadding + ifrBorder,
+        ifrHeight = height + ifrPadding + ifrBorder,
+        h, w;
+
+    if ( ifrWidth < scrWidth && ifrHeight < scrHeight ) {
+        w = ifrWidth;
+        h = ifrHeight;
+    } else if ( ( ifrWidth / scrWidth ) > ( ifrHeight / scrHeight ) ) {
+        w = scrWidth;
+        h = ( scrWidth / ifrWidth ) * ifrHeight;
+    } else {
+        h = scrHeight;
+        w = ( scrHeight / ifrHeight ) * ifrWidth;
+    }
+
+    return {
+        'width': w - ( ifrPadding + ifrBorder ),
+        'height': h - ( ifrPadding + ifrBorder )
+    };
+};
+        </script>
+    <script> $( document ).on( "pageinit", function() {
+    $( "#popupVideo2 iframe" )
+        .attr( "width", 0 )
+        .attr( "height", 0 );
+		  
+    $( "#popupVideo2" ).on({
+        popupbeforeposition: function() {
+            var size = scale( 497, 298, 15, 1 ),
+                w = size.width,
+                h = size.height;
+
+            $( "#popupVideo2 iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+        },
+        popupafterclose: function() {
+            $( "#popupVideo2 iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );
+             Froogaloop($('#player2')[0]).api('pause');
+        }
+    });
+            
+});</script>
+         <!--/video2--> 
+        
+       <!--slides--> 
+        <script type="text/javascript">
+function slide1() { 
+document.getElementById('id').src="Imgs/aguia2.jpg"; 
+setTimeout("slide2()", 2000) 
+} 
+
+function slide2() { 
+document.getElementById('id').src="Imgs/aguia1l.jpg"; 
+setTimeout("slide3()", 2000) 
+} 
+
+function slide3() { 
+document.getElementById('id').src="Imgs/Lisboa1.jpg"; 
+setTimeout("slide4()", 2000) 
+} 
+
+function slide4() { 
+document.getElementById('id').src="Imgs/praia.jpg"; 
+setTimeout("slide1()", 2000) 
+} 
+</script>
+ <!--/slides--> 
+        
+    </head>
+    <body onload="slide1()">
+      <!-- Start of first page -->
+<div data-role="page" id="pagAbertura" data-theme="a">
+
+	<div data-role="header">
+		<h1 id = "hi">NetLang Project</h1>
+		<a href="https://www.uminho.pt/PT"><img src="uminho_logo.png" width="50"></a>
+		<a href="#eng"><img src="UsaFlag.jpg" width="50"></a>
+		<a href="#pt"><img src="portugalFlag.png" width="50"></a>
+
+		<script>
+			//define language reload anchors
+			var dataReload = document.querySelectorAll("[data-reload]");
+
+			//Language translations
+		    var language = {
+		        eng: {
+		            welcome: "NetLang Project"
+		        },
+		        pt: {
+		            welcome: "Projeto NetLang"
+		        }
+		        
+		    };
+		    
+		    //Define language via window hash
+		    if (window.location.hash) {
+		        if (window.location.hash === "#pt"){
+		            hi.textContent = language.pt.welcome;
+		        }
+		    }
+		    //define language reload onclick illiteration
+		    for(i = 0; i <= dataReload.length; i++){
+		    	dataReload[i].onclick = function(){
+		    		location.reload(true);
+		    	};
+		    }
+		</script>
+        <a href="#DireitosAutor"  class="ui-btn ui-btn-right ui-shadow ui-corner-all ui-btn-icon-right ui-icon-info ui-btn-icon-notext" data-rel="popup" data-position-to="window" data-transition="pop"></a>
+		<div data-role="popup" id="DireitosAutor">
+	        <p><b>O que foi utilizado</b></p>
+	    <p> Outros: jQuery Mobile 1.4.5, HTML 5, CSS</p>
+	        
+	    
+	    	<a href="#pagAbertura" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+
+    	</div>
+	</div><!-- /header -->
+    
+    <ul>
+	  <li><a class="active" href="#home">Home</a></li>
+	  <li><a href="#dadosEstatisticos">Dados Estatísticos</a></li>
+	  <li><a href="#palavras">Palavras</a></li>
+	  <li><a href="#extracao">Extração</a></li>
+	  <li><a href="#procurar">Procurar</a></li>
+	</ul>
+    
+    <div role="main" class="ui-content">
+ <center><p>Explicação do Projeto</p></center>
+      
+    </div><!-- /content -->
+
+	<div data-role="footer">
+		<h4> Projeto LCC &nbsp;&nbsp;2020</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+     <!-- Start of second page -->
+<div data-role="page" id="dadosEstatisticos" data-theme="b">
+    
+    <div data-role="header">
+		<h1>Dados Estatísticos</h1>
+	</div><!-- /header -->
+    
+    <div role="main" class="ui-content">
+		
+        <p style="text-align: justify;">
+            Aqui apresentam-se alguns dados estatísticos relativamente aos comentários e textos já analisados
+        </p>
+     
+
+		<p><a href="#pagAbertura" class="ui-btn ui-btn-icon-left ui-icon-back" style="width:7%;margin:auto;font-size:12px;" data-transition="flip"> Voltar </a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>2020</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+     <!-- Start of third page -->
+<div data-role="page" id="palavras" data-theme="c">
+    
+    <div data-role="header">
+		<h1>Palavras</h1>
+	</div><!-- /header -->
+    
+    <div role="main" class="ui-content">
+		
+        <p style="text-align: justify;">
+            Aqui apresenta-se a tabela relativa às palavras que são analisadas nos comentários submetidos à ferramenta.
+        </p>
+        <p>
+        	<form name="search" action="escreve_palavras.py" method="get">
+        	<table>
+			 <tr>
+			   <td>Type of Prejudice:</td>
+			   <td><input type="text" name="type" size="40"> <br /></td>
+			 </tr>
+			 <tr>
+			   <td>Sociolinguistic variable:</td>
+			   <td><input type="text" name="Sociolinguistic" size="40"> <br /></td>
+			 </tr>
+			  <tr>
+			   <td>Keyword:</td>
+			   <td><input type="text" name="keyword" size="40"> <br /></td>
+			 </tr>
+			</table>
+			
+			<input type="submit" id='script' name="scriptbutton" value=" Acrescentar " >
+			</form>
+     	</p>
+
+		<p><a href="#pagAbertura" class="ui-btn ui-btn-icon-left ui-icon-back" style="width:7%;margin:auto;font-size:12px;" data-transition="flip"> Voltar </a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>2020</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+        
+        
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+<!--{% block title %}
+	Home Page
+{% endblock %}
+-->
+{% block content %}
+	<div class="words">
+	<p>If want to see to see the dictionary with the keywords click <a href= "{{ url_for('static', filename='dicionario_Ingles.pdf')}}" target="_blank">Dicionario</a></p>
+	 <p>
+        	<form name="form-actions" action="/words" method="post">
+        	<table>
+			 <tr>
+			   <td>Type of Prejudice:</td>
+			   <td><input type="text" name="type" size="40"> <br /></td>
+			 </tr>
+			 <tr>
+			   <td>Sociolinguistic variable:</td>
+			   <td><input type="text" name="sociolinguistic" size="40"> <br /></td>
+			 </tr>
+			  <tr>
+			   <td>Keyword:</td>
+			   <td><input type="text" name="keyword" size="40"> <br /></td>
+			 </tr>
+			</table>
+			
+			<input type="submit" id='script' name="scriptbutton" value=" Acrescentar " >
+			</form>
+     	</p>
+
+		<p><a href="/home" class="ui-btn ui-btn-icon-left ui-icon-back" style="width:7%;margin:auto;font-size:12px;" data-transition="flip"> Voltar </a></p>
+{% endblock %}

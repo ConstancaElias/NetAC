@@ -1,0 +1,7 @@
+DEBUG = True
+
+THREADS_PER_PAGE = 4
+
+CSRF_ENABLED = True
+
+SCRF_SESSION_KEY = "secret"

@@ -43,12 +43,12 @@ def words():
 		    encondF = "cp1252" 
 		else:
 		    encondF = "utf8"
-		with open("novas_palavras.txt", "w") as f: 
+		with open("novas_palavras2.txt", "w") as f: 
 			f.write("%s*%s*%s" % (typeP, sociolinguistic, keyword))
 		f.close()
-		process = subprocess.Popen(['python' , 'actualizar_dicionario.py', 'dicionario_Ingles.txt'], stdout=subprocess.PIPE)
-		out, err = process.communicate()
-		output = out
+		print("SUBPROCESS")
+		output = actualizar_dicionario('static/dicionario_Ingles.txt')
+		
 		return redirect(url_for("novapalavra", output = output))
 	else:
 		return render_template("words.html")

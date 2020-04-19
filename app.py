@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
-from flask import Flask, render_template, request, url_for, redirect, send_file
+from flask import Flask, render_template, request, url_for, redirect
 import os
 import subprocess
+import os.path
 
 app = Flask(__name__)
 
 from actualizar_dicionario import actualizar_dicionario
+from leitura_ficheiro_json import leitura_ficheiro_json
 
 
 '''
@@ -57,6 +59,33 @@ def words():
 def novapalavra():
 	output = request.args['output']
 	return render_template("novapalavra.html", output = output)
+
+@app.route("/Analise_Ficheiros",  methods=['POST', 'GET'])
+def Analise_Ficheiros():
+	if request.method == 'POST':
+		f = request.form['file']
+		string = 'static/Ficheiros_Json/' + f
+		if os.name == "nt":       
+		    encondF = "cp1252" 
+		else:
+		    encondF = "utf8"
+		f ="static/TabelaFreq_" + f+".pdf"
+		#no caso de ja existir pdf de um ficheiro, para ser mais rapido vamos so carregar o pdf sem o gerar de novo
+		if os.path.isfile(f):
+			return redirect(url_for("resultados_analise", file = f))
+		else:
+			leitura_ficheiro_json('static/dicionario_Ingles.txt', string)
+			return redirect(url_for("resultados_analise", file = f))
+	else:
+		return render_template("Analise_Ficheiros.html")
+
+@app.route('/resultados_analise')
+
+def resultados_analise():
+	#output = request.args['output']
+	f = request.args['file']
+	return render_template("resultados_analise.html", file = f)
+
 
 '''
 @app.route('/dicionario')

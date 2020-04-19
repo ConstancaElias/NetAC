@@ -36,9 +36,12 @@ No final do documento é feita a classificaçao do tipo de hate speech presete n
 
 
 def freq_to_table(variaveisSoc,ocorrencias,ficheiro_analizado,numeroPalavras,comentario_tabela,variveisPresentes,numeroPalavrasH,freqComentario):
- 
-    texfilename ="TabelaFreq_" + ficheiro_analizado + ".tex"
-    texfile = open("Frequencias"+"/" +texfilename, 'w')
+    ficheiro = ficheiro_analizado.split(". ")
+    fi = ficheiro[0].split("/")
+    print(fi)
+    texfilename ="TabelaFreq_" + fi[2] + ".tex"
+    print(texfilename)   
+    texfile = open("static"+"/" +texfilename, 'w')
     
     texfile.write("\documentclass[11pt]{article}\n\\usepackage{graphicx}\n\\usepackage{multirow}\n\\usepackage[pdftex]{hyperref}\n\\usepackage{colortbl}")
     texfile.write("\n\\usepackage{longtable, array}\n\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}\n\\newlength\mylength")
@@ -165,11 +168,9 @@ def freq_to_table(variaveisSoc,ocorrencias,ficheiro_analizado,numeroPalavras,com
 
     texfile.write("\end{document}")
 
-
-
     texfile.close()
     dire =  os.getcwd() 
-    path = dire+"/Frequencias"
+    path = dire+"/static"
     os.chdir(path)
     command = 'pdflatex ' + texfilename #gerar o ficheiro pdf a partir do .tex
     os.system(command)

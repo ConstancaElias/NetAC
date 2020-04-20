@@ -50,10 +50,9 @@
 ('Body Shaming', 'Physical Features'):['Fat','Fatso','Fatty','Butterball','Chubby','Lardass','Lump','Obese','Porker','Thin','Bag-of-bones','Beanpole','Beanstalk','Bony','Skinny','Skin-and-bones','Scrawny','Scraggy','Twiggy','Double eyes','Double chin','Bald'],
 ('Body Shaming', 'Physical (and Mental) Impairments'):['Ableism','Eugenics','Blind','Deaf','Dumb','Stutterer','Dwarf','Hunchback','Lame','Limp','Midget','Cripple','Disabled','Freak','Handicapped','Wheelchair bound','Bonkers','Crazy','Dim','Feeble-minded','Lunatic','Loony','Mental','Mong','Mongoloid','Nutter','Psycho','Retard','Spazz','Spazzie','Spastic','Weird','Weirdo','Window licker'],
 ('Addiction Shaming', 'Behavioural addictions'):[],
-('Addiction Shaming', 'Alcohol'):['Drunk','Drunkie'],
+('Addiction Shaming', 'Alcohol'):['Drunkie'],
 ('Addiction Shaming', 'Drugs'):['Junkie','Druggie','Drug addict'],
 ('Addiction Shaming', 'Pornography'):[],
 ('Addiction Shaming', 'Sex'):[],
-('Ideological Shaming', ' Ideological and Political Identity'):['Communist','Commie','Cuckservative','Fundie','Imperialist','Nazi','Libral','Libtard','Libturd','Looney Left','Leftard','Red','Republic*nt','Republicant','Repug','Cuck','Snowflake'],
-('Addiction Shaming', 'Gender'):['Drunk']
+('Ideological Shaming', ' Ideological and Political Identity'):['Communist','Commie','Cuckservative','Fundie','Imperialist','Nazi','Lib’ral','Libtard','Libturd','Looney Left','Leftard','Red','Republic*nt','Republicant','Repug','Cuck','Snowflake']
 }

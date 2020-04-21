@@ -1,0 +1,35 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.3.15)  18 APR 2020 20:17
+entering extended mode
+**TabelaFreq_run.tex
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\.tex"
+LaTeX2e <2018-12-01>
+File ignored)
+*~
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ~
+     
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+<*> ~
+     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 8 strings out of 492946
+ 335 string characters out of 3135527
+ 57009 words of memory out of 3000000
+ 4004 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 7i,0n,4p,99b,14s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

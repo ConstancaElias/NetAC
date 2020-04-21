@@ -16,9 +16,8 @@ from dict_to_table import dict_to_table #para atualizar a tabela LATEX
 # Formato do Comando: python3 actualizar_dicionario.py <DICIONARIO_A_ATUALIZAR>.txt
 
 
-def whatever(fileDicionario):
+def actualizar_dicionario(fileDicionario):
 
-    output = "something"
     with open(fileDicionario, encoding="utf8") as f:      #por ser windows tive de por encoding = 'cp1252' em vez de enconding = "utf-8"
         gene_data = f.read()
         print("GEN_DATA", gene_data)
@@ -27,11 +26,9 @@ def whatever(fileDicionario):
 
     #keywordTabEN = sorted(keywordTabEN.items(), key = lambda x : x[0])
     print("PRIMEIRO", keywordTabEN)
-
-
     #para abrir o ficheiro com palavras a adicionar ao diconario
 
-    conteudo_ficheiro = open("novas_palavras2.txt", "r", encoding = "utf8")
+    conteudo_ficheiro = open("novas_palavras.txt", "r", encoding = "utf8")
     #le as linhas do ficheiro com as palavras novas
     output = "abrir"
     for linha in conteudo_ficheiro:
@@ -48,8 +45,8 @@ def whatever(fileDicionario):
                 output = keyword + str(keywordTabEN)
                 keywordTabEN[(tipo,variavel)].sort()
             else:
-                print("A palavra ja se encontra no dicionario")
-                output = "A palavra ja se encontra no dicionario"
+                #print("A palavra ja se encontra no dicionario")
+                output = "The word you are trying to introduce in the dictionary is already there."
         #se o par nao existir, adicionamos ao dicionario com uma lista vazia
         else:
             keywordTabEN[(tipo,variavel)] = []
@@ -57,11 +54,10 @@ def whatever(fileDicionario):
             output = keyword + str(keywordTabEN)
     conteudo_ficheiro.close()
 
-    arquivo = open(sys.argv[1], 'w') # Abre novamente o ficheiro com o dicionario mas desta vez em mod escrita
+    arquivo = open(fileDicionario, 'w') # Abre novamente o ficheiro com o dicionario mas desta vez em mod escrita
     print("SEGUNDO", keywordTabEN)
     #constroi o dicionario ja atualizado no ficheiro
     arquivo.write("{\n")
-
     n_tipos_preconceito = len(keywordTabEN) - 1
 
     for i in keywordTabEN:
@@ -73,7 +69,7 @@ def whatever(fileDicionario):
         comprimento = len(keywordTabEN[i])-1
         for j in keywordTabEN[i]:
             j = "'" + j +  "'"
-            print(str(j))
+            print("keyword", str(j))
             arquivo.write(str(j))
             if comprimento != 0:
                 arquivo.write(",")

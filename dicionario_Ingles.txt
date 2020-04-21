@@ -54,5 +54,5 @@
 ('Addiction Shaming', 'Drugs'):['Junkie','Druggie','Drug addict'],
 ('Addiction Shaming', 'Pornography'):[],
 ('Addiction Shaming', 'Sex'):[],
-('Ideological Shaming', ' Ideological and Political Identity'):['Communist','Commie','Cuckservative','Fundie','Imperialist','Nazi','Lib’ral','Libtard','Libturd','Looney Left','Leftard','Red','Republic*nt','Republicant','Repug','Cuck','Snowflake']
+('Ideological Shaming', ' Ideological and Political Identity'):['Communist','Commie','Cuckservative','Fundie','Imperialist','Nazi','Libral','Libtard','Libturd','Looney Left','Leftard','Red','Republic*nt','Republicant','Repug','Cuck','Snowflake']
 }

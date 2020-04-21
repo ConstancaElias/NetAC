@@ -1,0 +1,96 @@
+<!--{% block title %}
+	Home Page
+{% endblock %}
+-->
+{% block content %}
+<div class="Analise_Ficheiros">
+    <p>
+    <h1 text-align: center;>Please choose the file you want to analyze:</h1>
+    <p>For the file, two tables are shown. A first analysis of hate speech by comments and the second makes a synthesis of the sociolinguistic variables found in the post and the associated hate speech.</p>
+    <p>At the end of the file, there is a summary of the analysis.</p>
+    <form class="form-actions" action="/Analise_Ficheiros"  method="post" >
+			    <label>Select file</label>
+			    <select class="form-control" name="file" >
+                    <option>youtube_extraction_english_37.json</option>
+                    <option>youtube_extraction_english_42.json</option>
+                    <option>youtube_extraction_english_53.json</option>
+                    <option>youtube_extraction_english_58.json</option>
+                    <option>youtube_extraction_english_59.json</option>
+                    <option>youtube_extraction_english_60.json</option>
+                    <option>youtube_extraction_english_76.json</option>
+                    <option>youtube_extraction_english_77.json</option>
+                    <option>youtube_extraction_english_78.json</option>
+                    <option>youtube_extraction_english_79.json</option>
+                    <option>youtube_extraction_english_80.json</option>
+                    <option>youtube_extraction_english_81.json</option>
+                    <option>youtube_extraction_english_82.json</option>
+                    <option>youtube_extraction_english_83.json</option>
+                    <option>youtube_extraction_english_85.json</option>
+                    <option>youtube_extraction_english_86.json</option>
+                    <option>youtube_extraction_english_87.json</option>
+                    <option>youtube_extraction_english_88.json</option>
+                    <option>youtube_extraction_english_89.json</option>
+                    <option>youtube_extraction_english_90.json</option>
+                    <option>youtube_extraction_english_91.json</option>
+                    <option>youtube_extraction_english_94.json</option>
+                    <option>youtube_extraction_english_95.json</option>
+                    <option>youtube_extraction_english_97.json</option>
+                    <option>youtube_extraction_english_98.json</option>
+                    <option>youtube_extraction_english_126.json</option>
+                    <option>youtube_extraction_english_128.json</option>
+                    <option>youtube_extraction_english_148.json</option>
+                    <option>youtube_extraction_english_149.json</option>
+                    <option>youtube_extraction_english_150.json</option>
+                    <option>youtube_extraction_english_153.json</option>
+                    <option>youtube_extraction_english_157.json</option>
+                    <option>youtube_extraction_english_158.json</option>
+                    <option>youtube_extraction_english_159.json</option>
+                    <option>youtube_extraction_english_161.json</option>
+                    <option>youtube_extraction_english_161.json</option>
+                    <option>youtube_extraction_english_167.json</option>
+                    <option>youtube_extraction_english_171.json</option>
+                    <option>youtube_extraction_english_172.json</option>
+                    <option>youtube_extraction_english_173.json</option>
+                    <option>youtube_extraction_english_175.json</option>
+                    <option>youtube_extraction_english_176.json</option>
+                    <option>youtube_extraction_english_178.json</option>
+                    <option>youtube_extraction_english_180.json</option>
+                    <option>youtube_extraction_english_181.json</option>
+                    <option>youtube_extraction_english_182.json</option>
+                    <option>youtube_extraction_english_183.json</option>
+                    <option>youtube_extraction_english_190.json</option>
+                    <option>youtube_extraction_english_191.json</option>
+                    <option>youtube_extraction_english_192.json</option>
+                    <option>youtube_extraction_english_193.json</option>
+                    <option>youtube_extraction_english_204.json</option>
+                    <option>youtube_extraction_english_205.json</option>
+                    <option>youtube_extraction_english_209.json</option>
+                    <option>youtube_extraction_english_224.json</option>
+                    <option>youtube_extraction_english_225.json</option>
+                    <option>youtube_extraction_english_232.json</option>
+                    <option>youtube_extraction_english_234.json</option>
+                    <option>youtube_extraction_english_236.json</option>
+                    <option>youtube_extraction_english_237.json</option>
+                    <option>youtube_extraction_english_240.json</option>
+                    <option>youtube_extraction_english_250.json</option>
+                    <option>youtube_extraction_english_261.json</option>
+                    <option>youtube_extraction_english_266.json</option>
+                    <option>youtube_extraction_english_269.json</option>
+                    <option>youtube_extraction_english_289.json</option>
+                    <option>youtube_extraction_english_291.json</option>
+                    <option>youtube_extraction_english_294.json</option>
+                    <option>youtube_extraction_english_295.json</option>
+                    <option>youtube_extraction_english_296.json</option>
+                    <option>youtube_extraction_english_298.json</option>
+                    <option>youtube_extraction_english_300.json</option>
+                    <option>youtube_extraction_english_301.json</option>
+                    <option>youtube_extraction_english_302.json</option>
+                    <option>youtube_extraction_english_303.json</option>
+                    <option>youtube_extraction_english_304.json</option>
+            <input class="btn btn-primary" type="submit" value="Submit">
+
+    </form>
+</p>
+<p><a href="/home" class="ui-btn ui-btn-icon-left ui-icon-back" style="width:7%;margin:auto;font-size:12px;" data-transition="flip"> Voltar </a></p>
+
+{% endblock %}

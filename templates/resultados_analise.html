@@ -1,0 +1,20 @@
+<!--{% block title %}
+	Home Page
+{% endblock %}
+-->
+{% extends 'base.html'%}
+{% block content %}
+<div class="File_Analyzer">
+    <p>
+    <h1 text-align: center;>Please select the file you want to analyze:</h1>
+    <p>For the file, two tables are shown. A first analysis of hate speech by comments and the second makes a synthesis of the sociolinguistic variables found in the post and the associated hate speech.</p>
+    <p>At the end of the file, there is a summary of the analysis.</p>
+    <embed src= static/{{out4}} width="1000" height="780" type='application/pdf'>
+    <p> {{out1}} </p>
+    <p> {{out2}} </p>
+    <p> {{out3}} </p>
+
+
+<p><a href="/home" class="ui-btn ui-btn-icon-left ui-icon-back" style="width:7%;margin:auto;font-size:12px;" data-transition="flip"> Voltar </a></p>
+
+{% endblock %}

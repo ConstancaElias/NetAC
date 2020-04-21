@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 
-from flask import Flask, render_template, request, url_for, redirect, send_file
+from flask import Flask, render_template, request, url_for, redirect, flash
 import os
 import subprocess
+import os.path
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
 from actualizar_dicionario import actualizar_dicionario
+from leitura_ficheiro_json import leitura_ficheiro_json
+
+dire =  os.getcwd() 
+
 
 
 '''
@@ -43,12 +49,12 @@ def words():
 		    encondF = "cp1252" 
 		else:
 		    encondF = "utf8"
-		with open("novas_palavras.txt", "w") as f: 
+		with open("novas_palavras2.txt", "w") as f: 
 			f.write("%s*%s*%s" % (typeP, sociolinguistic, keyword))
 		f.close()
-		process = subprocess.Popen(['python' , 'actualizar_dicionario.py', 'dicionario_Ingles.txt'], stdout=subprocess.PIPE)
-		out, err = process.communicate()
-		output = out
+		print("SUBPROCESS")
+		output = actualizar_dicionario('dicionario_Ingles.txt')
+		
 		return redirect(url_for("novapalavra", output = output))
 	else:
 		return render_template("words.html")
@@ -58,6 +64,35 @@ def novapalavra():
 	output = request.args['output']
 	return render_template("novapalavra.html", output = output)
 
+ALLOWED_EXTENSIONS = set(['json'])
+
+def allowed_file(filename):
+	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+	if request.method == 'POST':
+		if request.files:
+			f = request.files['file']
+			print("FILE", f.filename)
+			f.save(secure_filename(f.filename))
+			out1, out2, out3, out4 = leitura_ficheiro_json('dicionario_Ingles.txt', f.filename)
+			#print(out1, out2, out3)
+			return redirect(url_for("resultados_analise", f = f.filename, out1 = out1, out2 = out2, out3 = out3, out4 = out4))
+	else:
+		return render_template('upload.html')
+
+@app.route('/resultados_analise',  methods=['GET','POST'])
+def resultados_analise():
+	#output = request.args['output']
+	f = request.args['f']
+	out1 = request.args['out1']
+	out2 = request.args['out2']
+	out3 = request.args['out3']
+	out4 = request.args['out4']
+	print(out4)
+	return render_template("resultados_analise.html", file = f, out1 = out1, out2 = out2, out3 = out3, out4 = out4)
 '''
 @app.route('/dicionario')
 def dicionario():

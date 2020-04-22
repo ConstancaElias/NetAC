@@ -49,7 +49,7 @@ def words():
 		    encondF = "cp1252" 
 		else:
 		    encondF = "utf8"
-		with open("novas_palavras2.txt", "w") as f: 
+		with open("novas_palavras.txt", "w") as f: 
 			f.write("%s*%s*%s" % (typeP, sociolinguistic, keyword))
 		f.close()
 		print("SUBPROCESS")

@@ -40,8 +40,9 @@ def freq_to_table(variaveisSoc,ocorrencias,ficheiro_analizado,numeroPalavras,com
     fi = ficheiro[0].split('.')
     print("FIIIII",fi)
     texfilename ="TabelaFreq_" + fi[0] + ".tex"
-    print(texfilename)   
-    texfile = open(texfilename, 'w')
+    print(texfilename)
+    dirtexfilename = "static/Frequencias/" + texfilename   
+    texfile = open(dirtexfilename, 'w')
     
     texfile.write("\documentclass[11pt]{article}\n\\usepackage{graphicx}\n\\usepackage{multirow}\n\\usepackage[pdftex]{hyperref}\n\\usepackage{colortbl}")
     texfile.write("\n\\usepackage{longtable, array}\n\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}\n\\newlength\mylength")
@@ -170,7 +171,10 @@ def freq_to_table(variaveisSoc,ocorrencias,ficheiro_analizado,numeroPalavras,com
 
     texfile.close()
     
+    dire = os.getcwd()
+    path = dire + "/static/Frequencias/"
+    os.chdir(path)
     command = 'pdflatex ' + texfilename #gerar o ficheiro pdf a partir do .tex
     os.system(command)
-    pdffilename = texfilename.split('.')[0] + ".pdf"
+    pdffilename = "Frequencias/" + texfilename.split('.')[0] + ".pdf"
     return pdffilename

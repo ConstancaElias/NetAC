@@ -24,4 +24,6 @@ Para sair do _env_, executar o comando _deactivate_.
 
 2) set FLASK_APP = "app.py"
 
-3) flask run
+3) export FLASK_RUN_PORT=10400
+
+4) flask run --host=193.136.19.129

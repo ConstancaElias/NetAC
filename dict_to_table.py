@@ -95,9 +95,8 @@ def dict_to_table(filename):
 		tant = t
 		sant = s
 		inicio += 1
-	if fl == 0:
-		string += '\hline\n'
-		texfile.write("\\multirow{%d}*{%s} %s" % (c,t, string))
+	string += '\hline\n'
+	texfile.write("\\multirow{%d}*{%s} %s" % (c,t, string))
 	texfile.write("\n\end{longtable}\n\end{center}\n\end{document}")
 
 	texfile.close()

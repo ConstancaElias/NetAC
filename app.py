@@ -54,16 +54,16 @@ def words():
 			f.write("%s*%s*%s" % (typeP, sociolinguistic, keyword))
 		f.close()
 		os.chdir(dire)
-		nome = actualizar_dicionario('dicionario_Ingles.txt')
+		output = actualizar_dicionario('dicionario_Ingles.txt')
 		os.chdir(dire)
-		return redirect(url_for("novapalavra", nome = nome))
+		return redirect(url_for("novapalavra", output = output))
 	else:
 		return render_template("words.html")
 
 @app.route('/novapalavra')
 def novapalavra():
-	nome = request.args['nome']
-	return render_template("novapalavra.html", nome = nome)
+	output = request.args['output']
+	return render_template("novapalavra.html", output = output)
 
 ALLOWED_EXTENSIONS = set(['json'])
 

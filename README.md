@@ -1,6 +1,6 @@
 # Projeto_NetLang
 
-## Para correr o site:
+## Para correr o site em Windows:
 
 1) instalar flask
 
@@ -17,3 +17,11 @@ Em Windows:
 6) abrir o browser e escrever o endereço "localhost:5000"
 
 Para sair do _env_, executar o comando _deactivate_.
+
+## Para correr o site no servidor:
+
+1) executar: source env/bin/activate
+
+2) set FLASK_APP = "app.py"
+
+3) flask run

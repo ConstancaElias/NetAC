@@ -64,37 +64,31 @@ def dict_to_table(filename):
 	#percorre o dicionario d
 	for key in sorted(d.keys()):
 		t, s = key
-		if d[key] == "":
-			kw = '&'
-		else:
-			kw = d[key]
+
 		if inicio == 1:
 			c = 1
 			tant = t
 			string += ' & ' + '\cellcolor{' + color + '}' + s + ' & ' + '\cellcolor{' + color + '}' + d[key] + ' \\\\ '
-			color = color2
 		else:
 			if t in tant: 		#se type of prejudice é o mesmo
 				c += 1
-				string += ' & ' + '\cellcolor{' + color + '}' + s + ' & ' + '\cellcolor{' + color + '}' + d[key] + ' \\\\  '
 				if color in color1:
 					color = color2
 				else:
 					color = color1
+				string += ' & ' + '\cellcolor{' + color + '}' + s + ' & ' + '\cellcolor{' + color + '}' + d[key] + ' \\\\  '
+				
 				fl += 1
 
 			if t not in tant: 	# se mudou o type of prejudice.   Só depois de sabermos todas as var sociolinguisticas do type of prejudice é que podemos escrever a multirow no ficheiro
 				string += '\hline\n'
 				texfile.write("\\multirow{%d}*{%s} %s" % (c,tant, string))
-				string += ' & ' + '\cellcolor{' + color + '}' + s + ' & ' + '\cellcolor{' + color + '}' + d[key] + ' \\\\  '
 				
-				
-				c = 1
-				if fl == 1:			#contador de var sociolonguisticas volta a zero
-					if color in color1:
-						color = color2
-					else:
-						color = color1
+				c = 1			#contador de var sociolonguisticas volta a zero
+				if color in color1:
+					color = color2
+				else:
+					color = color1
 				string = ' & ' + '\cellcolor{' + color + '}' + s + ' & ' + '\cellcolor{' + color + '}' + d[key] + ' \\\\  '
 				fl = 1
 

@@ -24,8 +24,10 @@ def actualizar_dicionario(fileDicionario):
 
     keywordTabEN = ast.literal_eval(gene_data)
 
+    f.close()
+
     #keywordTabEN = sorted(keywordTabEN.items(), key = lambda x : x[0])
-    print("PRIMEIRO", keywordTabEN)
+    #print("PRIMEIRO", keywordTabEN)
     #para abrir o ficheiro com palavras a adicionar ao diconario
 
     conteudo_ficheiro = open("novas_palavras.txt", "r", encoding = "utf8")
@@ -55,21 +57,21 @@ def actualizar_dicionario(fileDicionario):
     conteudo_ficheiro.close()
 
     arquivo = open(fileDicionario, 'w') # Abre novamente o ficheiro com o dicionario mas desta vez em mod escrita
-    print("SEGUNDO", keywordTabEN)
+    #print("SEGUNDO", keywordTabEN)
     #constroi o dicionario ja atualizado no ficheiro
     arquivo.write("{\n")
     n_tipos_preconceito = len(keywordTabEN) - 1
 
     for i in keywordTabEN:
         si = str(i)
-        print("si", si)
+      #  print("si", si)
         arquivo.write(si)
         arquivo.write(":")
         arquivo.write("[")
         comprimento = len(keywordTabEN[i])-1
         for j in keywordTabEN[i]:
             j = "'" + j +  "'"
-            print("keyword", str(j))
+         #   print("keyword", str(j))
             arquivo.write(str(j))
             if comprimento != 0:
                 arquivo.write(",")
@@ -86,5 +88,5 @@ def actualizar_dicionario(fileDicionario):
 
     open('novas_palavras.txt', 'w').close()
 
-    dict_to_table(fileDicionario)
-    return output
+    txt = dict_to_table(fileDicionario)
+    return txt

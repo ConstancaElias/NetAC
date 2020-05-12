@@ -1,5 +1,5 @@
 {
-('Sexism', 'Gender'):['Male chauvinism','Chauvinist','Gender','Sex','Sexual','Sexism','Misogyn','Misogyny','Misogynous','Misogynist','Misogyne','Patriarchy','Pussy pass','Misandry','Misandris','Woman','Chick','Dame'],
+('Sexism', 'Gender'):['Chauvinist','Chick','Dame','Gender','Male chauvinism','Misandris','Misandry','Misogyn','Misogyne','Misogynist','Misogynous','Misogyny','Patriarchy','Pussy pass','Sex','Sexism','Sexual','Woman'],
 ('Sexism', 'Female age and physical appearance'):['Old hag','Hag','Crone','Witch','Minger'],
 ('Sexism', 'Female sexuality'):['B*tch','Froggie','Harlot','Ho','Hooker','Promiscuous','Sharmoota','Slag','Slapper','Slattern','Sl*t','Sloot','Tart','THOT','Trollop','Tramp','Wh*re'],
 ('Sexism', 'Female intelligence'):['Dumb blonde','Becky','Make me a sandwich','Bimbo','Feminazi'],
@@ -11,12 +11,13 @@
 ('Racism', 'Arab'):['Camel jockey','Dune coon','Sand nigger','Hajji','Hadji','Haji'],
 ('Racism', 'Asian (East: China, Japan, Korea, Philippines, Vietnam)'):['Buddhahead','Chinki','Oriental','Pancake face','Pancake','Yellow','Yellowman','Yellowwoman','Zip','Zipperhead','Banana'],
 ('Racism', 'Asian (South: India, Pakistan, Bangladesh)'):['ABCD','Curry muncher','Dot','Dothead','Paki','Porkistani','Brownie'],
-('Racism', 'Black'):['Ape','Black','Bluegum','Boogie','Bootlips','Buck','Burrhead','Burr-head','Burr head','Colored','coloured','Coon','Crow','Darky','Darkey','Darkie','Eggplant','Eight ball','Fuzzy','Groid','Jigaboo','Jiggabo','Jijjiboo','Zigabo','Jig','Jigg','Jiggy','Jigga','Jim Crow','Jungle bunny','Monkey','Mooncricket','Negro','Nig-nog','Nigger','Nigra','Nigga','Niggah','Nigguh','Porch monkey','Powder burn','Quashie','Sambo','Schvartse','Schwartze','Shiner','Sooty','Spade','Spearchucker','Spook','Teapot','Toad','Thicklips','African'],
+('Racism', 'Black'):['Ape','Black','Bluegum','Boogie','Bootlips','Buck','Burrhead','Burr-head','Burr head','Colored','coloured','Coon','Crow','Darky','Darkey','Darkie','Eggplant','Eight ball','Fuzzy','Groid','Jigaboo','Jiggabo','Jijjiboo','Zigabo','Jig','Jigg','Jiggy','Jigga','Jim Crow','Jungle bunny','Monkey','Mooncricket','Negro','Nig-nog','Nigger','Nigra','Nigga','Niggah','Nigguh','Porch monkey','Powder burn','Quashie','Sambo','Schvartse','Schwartze','Shiner','Sooty','Spade','Spearchucker','Spook','Teapot','Toad','Thicklips','African','African'],
 ('Racism', 'Jewish'):[],
 ('Racism', 'Native-American'):['Indian','Injun','Prairie Nigger','Red','Redskin','Timber Nigger','Squaw','Apple'],
 ('Racism', 'Roma'):['Gypsy','Gyppo','Gypo','Gyppie','Gyppy','Gipp','Gippo','Traveller'],
 ('Racism', 'White'):['Cracker','Gammon','Hick','Honky','Honkey','Honkie','Medigan','Amedigan','Ofay','Peckerwood','Redneck','Trailer trash','Whitey','White Trash'],
 ('Nationalism and Xenophobia', 'Nationality'):['Nation','Nationality','Nationalism','Xenophobia','Alien','Refugee','Migrant','Immigrant','Immigrunts','immigruntz','Rapefugees','WOP','Engineers','doctors'],
+('Nationalism and Xenophobia', 'Brazilian'):[],
 ('Nationalism and Xenophobia', 'European or anti-Europeans'):['Brexit','Eurofags','Remainers','Remainiacs','Remoaners','Brexiteer','Quitter','Leaver','EUSSR'],
 ('Nationalism and Xenophobia', 'Eastern European'):['Polish Plumber','Polack','Pollock'],
 ('Nationalism and Xenophobia', 'Southern European'):['PIGS','Dago'],
@@ -54,5 +55,5 @@
 ('Addiction Shaming', 'Drugs'):['Junkie','Druggie','Drug addict'],
 ('Addiction Shaming', 'Pornography'):[],
 ('Addiction Shaming', 'Sex'):[],
-('Ideological Shaming', ' Ideological and Political Identity'):['Communist','Commie','Cuckservative','Fundie','Imperialist','Nazi','Libral','Libtard','Libturd','Looney Left','Leftard','Red','Republic*nt','Republicant','Repug','Cuck','Snowflake']
+('Ideological Shaming', ' Ideological and Political Identity'):['Communist','Commie','Cuckservative','Fundie','Imperialist','Nazi','Lib�ral','Libtard','Libturd','Looney Left','Leftard','Red','Republic*nt','Republicant','Repug','Cuck','Snowflake']
 }

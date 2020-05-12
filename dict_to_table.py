@@ -9,7 +9,7 @@ else:
 
 #funcao que recebe o ficheiro com o dicionario e cria a tabela
 def dict_to_table(filename):
-
+	print(filename)
 	file = open(filename)
 	d = {}
 
@@ -42,8 +42,8 @@ def dict_to_table(filename):
 
 	file.close()
 	
-	texfilename = filename.split('.')[0][7:] + '.tex'
-	texfile = open("static/Dicionarios/" + texfilename, 'w')
+	texfilename = filename.split('.')[0] + '.tex'
+	texfile = open("static/" + texfilename, 'w')
 	texfile.write("\documentclass[11pt]{article}\n\\usepackage{graphicx}\n\\usepackage{multirow}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage[portuguese]{babel}\n\\usepackage{lmodern}\n\\usepackage{colortbl}")
 	texfile.write("\n\\usepackage{longtable, array}\n\\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}\n\\newlength\mylength")
 	texfile.write("\n\\usepackage[legalpaper, landscape, margin=1in]{geometry}\n\\newcommand{\MinNumber}{0}")
@@ -93,7 +93,8 @@ def dict_to_table(filename):
 
 	texfile.close()
 	dire =  os.getcwd() 
-	path = dire+"/static/Dicionarios"
+	path = dire+"/static"
 	os.chdir(path)
 	command = 'pdflatex ' + texfilename #gerar o ficheiro pdf a partir do .tex
 	os.system(command)
+	return filename.split('.')[0]+".pdf"

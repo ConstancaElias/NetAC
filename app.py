@@ -8,12 +8,13 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-from actualizar_dicionario import actualizar_dicionario
-from leitura_ficheiro_json import leitura_ficheiro_json
-
+## evita que se tenha de fazer ctrl + f5 para recarregar os pdfs
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+CACHE_TYPE = "null"
 dire =  os.getcwd() 
 
-
+from actualizar_dicionario import actualizar_dicionario
+from leitura_ficheiro_json import leitura_ficheiro_json
 
 '''
 def execute(cmd, files):
@@ -52,17 +53,17 @@ def words():
 		with open("novas_palavras.txt", "w") as f: 
 			f.write("%s*%s*%s" % (typeP, sociolinguistic, keyword))
 		f.close()
-		print("SUBPROCESS")
-		output = actualizar_dicionario('dicionario_Ingles.txt')
-		
-		return redirect(url_for("novapalavra", output = output))
+		os.chdir(dire)
+		nome = actualizar_dicionario('dicionario_Ingles.txt')
+		os.chdir(dire)
+		return redirect(url_for("novapalavra", nome = nome))
 	else:
 		return render_template("words.html")
 
 @app.route('/novapalavra')
 def novapalavra():
-	output = request.args['output']
-	return render_template("novapalavra.html", output = output)
+	nome = request.args['nome']
+	return render_template("novapalavra.html", nome = nome)
 
 ALLOWED_EXTENSIONS = set(['json'])
 
@@ -70,15 +71,17 @@ def allowed_file(filename):
 	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
+
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
 	if request.method == 'POST':
 		if request.files:
 			f = request.files['file']
-			print("FILE", f.filename)
 			f.save(secure_filename(f.filename))
+			print("FILE", f.filename)
+			os.chdir(dire)
 			out1, out2, out3, out4 = leitura_ficheiro_json('dicionario_Ingles.txt', f.filename)
-			#print(out1, out2, out3)
+			#print(out1, out2, out3
 			return redirect(url_for("resultados_analise", f = f.filename, out1 = out1, out2 = out2, out3 = out3, out4 = out4))
 	else:
 		return render_template('upload.html')
@@ -102,3 +105,4 @@ def dicionario():
 
 if __name__ == "__main__":
 	app.run()
+	

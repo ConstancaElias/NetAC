@@ -38,16 +38,16 @@ def leitura_ficheiro_json(fileDicionario,ficheiroJson):
     #abrir o ficheiro json a ler
     with open(ficheiroJson, encoding=encondF) as myfile:
         data=myfile.read()
-
+        myfile.close()
     # parse file
     obj = json.loads(data)
 
-    myfile.close()
 
 
     #Abrir e ler o dicionario
     with open(fileDicionario, encoding=encondF) as f:
         gene_data = f.read()
+        f.close()
     keywordTabEN = ast.literal_eval(gene_data)
     
 
@@ -166,8 +166,7 @@ def leitura_ficheiro_json(fileDicionario,ficheiroJson):
                             slv_ant = slv                
                                         
                             
-    f.close()
-
+ 
 
 
     # a string s contem todas as variaveis sociolinguisticas presentes no post
@@ -203,7 +202,8 @@ def leitura_ficheiro_json(fileDicionario,ficheiroJson):
     print("\n")
     print("Overall there were " + freqComentario + " occurences of hate speech related comments.")
 
-    out= "The percentage of hate speech related words is " + str(round(( (ocorrencias[variavel])/numeroPalavras)*100,3)) + "%"
+    out= "The percentage of hate speech related words is " + str(round((numeroPalavrasH/numeroPalavras)*100,4))+ "%"
     out1 = "Taking into account what was detected, we can reach the conclusion these comments are associated with : " + s[0:len(s)-1] + "."
     out2 = "Overall there were " + freqComentario + " occurences of hate speech related comments."
+    
     return  out, out1, out2, out4

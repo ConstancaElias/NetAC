@@ -5,8 +5,8 @@
 -->
 {% block content %}
 	<div class="novapalavra">
-	<p>If want to see to see the dictionary with the keywords click <a href= "{{ url_for('static', filename='dicionario_Ingles.pdf')}}" target="_blank">Dicionario</a></p>
-	<p>{{output}}</p>
-
-	<p><a href="/home" class="ui-btn ui-btn-icon-left ui-icon-back" style="width:7%;margin:auto;font-size:12px;" data-transition="flip"> Voltar </a></p>
+	<p>Hate speech successfully added</p>
+	<embed src= static/{{nome}} width="1000" height="780" type='application/pdf'>
+	
+	<p><a href="/words" class="ui-btn ui-btn-icon-left ui-icon-back" style="width:7%;margin:auto;font-size:12px;" data-transition="flip"> back </a></p>
 {% endblock %}

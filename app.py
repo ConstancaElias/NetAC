@@ -63,7 +63,8 @@ def words():
 @app.route('/novapalavra')
 def novapalavra():
 	output = request.args['output']
-	return render_template("novapalavra.html", output = output)
+	out1, out2 = output.split(':')
+	return render_template("novapalavra.html", out1 = out1, out2 = out2)
 
 ALLOWED_EXTENSIONS = set(['json'])
 

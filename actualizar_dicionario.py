@@ -42,7 +42,7 @@ def actualizar_dicionario(fileDicionario):
             #se a keyword ainda nao estiver na lista do respetivo par vai adiciona-la
             if keyword not in keywordTabEN[(tipo,variavel)]:
                 keywordTabEN[(tipo,variavel)].append(keyword)
-                output = keyword + str(keywordTabEN)
+                output = "Hate speech keyword successfully added: " + keyword
                 keywordTabEN[(tipo,variavel)].sort()
             else:
                 #print("A palavra ja se encontra no dicionario")
@@ -51,7 +51,7 @@ def actualizar_dicionario(fileDicionario):
         else:
             keywordTabEN[(tipo,variavel)] = []
             keywordTabEN[(tipo,variavel)].append(keyword)
-            output = "Hate speech keyword successfully added.\n" + keyword
+            output = "Hate speech variable successfully added: "+ tipo + variavel + keyword
     conteudo_ficheiro.close()
 
     arquivo = open(fileDicionario, 'w') # Abre novamente o ficheiro com o dicionario mas desta vez em mod escrita

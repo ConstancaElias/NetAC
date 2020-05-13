@@ -22,21 +22,25 @@ def dict_to_table(filename):
 			slv = slv[2:-2]
 			value = ""
 			if "[]" in v:
+				print("VVV", value)
 				d[(tp, slv)] = value
 			else:
 				v = v[1:-2]
 
-				conj = v.split(',')
 
-				value = conj[0][1:-1]
-				for i in range(1, len(conj)-1):
-					w = conj[i]
-					w = w[1:-1]
-					value += ', ' + w
+				conj = v.split(',')
+				if len(conj) == 1:
+					value = conj[0][1:-2]
+				else:
+					value = conj[0][1:-1]
+					for i in range(1, len(conj)-1):
+						w = conj[i]
+						w = w[1:-1]
+						value += ', ' + w
 		
-				w = conj[len(conj)-1]
-				w = w[1:-2]
-				value += ', ' + w
+					w = conj[len(conj)-1]
+					w = w[1:-2]
+					value += ', ' + w
 
 				d[(tp, slv)] = value
 
@@ -64,7 +68,7 @@ def dict_to_table(filename):
 	#percorre o dicionario d
 	for key in sorted(d.keys()):
 		t, s = key
-
+		print("DDDDD", d[key])
 		if inicio == 1:
 			c = 1
 			tant = t

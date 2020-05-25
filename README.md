@@ -18,12 +18,12 @@ Em Windows:
 
 Para sair do _env_, executar o comando _deactivate_.
 
-## Para correr o site no servidor:
+## Para as alterações feitas no site do servidor serem refletidas no browser:
 
-1) executar: source env/bin/activate
+1) ps fax | grep -i flask
 
-2) set FLASK_APP = "app.py"
+2) kill -9 PID_DO_PROCESSO_OBTIDO_NO_COMANDO_ANTERIOR
 
 3) export FLASK_RUN_PORT=10400
 
-4) flask run --host=193.136.19.129
+4) nohup flask run --host 127.0.0.1 &

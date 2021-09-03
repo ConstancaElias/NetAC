@@ -1,4 +1,4 @@
-# NetAC
+# NetAC (NetLang Analyzer and Classifier)
 
 NetAC is a statistical framework, built in the context of NetLang Project, to study **prejudice discourse** aiming at individual or group discrimination. Given a categorization table the tools included in NetAC search for frequency of occurrence of the keywords in each category and, based on the greatest frequency, propose a classification for each comment and for the overall text. Besides the main classifier, other features are included.
 
@@ -6,7 +6,7 @@ Article published on WordCIST 2021 Conference: [NetAC, An Automatic Classifier o
 
 ## Architecture
 
-![architecture diagram]()
+![architecture diagram](https://github.com/ConstancaElias/NetAC/blob/master/static/images/dgeral.png).
 
 
 ## Web App

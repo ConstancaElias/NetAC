@@ -1,0 +1,78 @@
+{
+    "header": {
+        "title": " Older workers fear struggles with failing health and ageism:10million over-50s in work ",
+        "subtitle": " OVER-50s believe they will struggle to retire on their own terms because of problems with failing health, needing to care for others and ageism, according to research. The preferred option would be to go part-time at 63, with three years of reduced hours before they give up work for good at 66 years and six months, Aegon found. ",
+        "owner": " Liz Perkins ",
+        "views": " NA ",
+        "likes": " NA ",
+        "dislikes": " NA ",
+        "shares": "NA",
+        "datePosted": " 09:13, Mon, Mar 4, 2019 ",
+        "dateExtraction": " 2020-02-07 ",
+        "language": " en ",
+        "plataform": " Newspaper ",
+        "url": " https://www.express.co.uk/news/uk/1095278/Older-workers-struggles-failing-health-ageism ",
+        "postText": "'Five million workers aged over 50 are keen to embrace the plan, but a triple whammy of factors are set to stop their dream retirement.', 'Seven million workers feared failing health will have the biggest impact on their decision.', 'A further five million believed caring responsibilities for a parent or spouse would also influence when they end their working life.', 'But 35 percent of older workers fear their careers will be brought to an end by ageism.', 'It comes in the wake of findings which show half of retirees didn 't leave the workforce in the manner they would have wanted.', ' Figures from Office for National Statistics show 10.3 million over - 50 s in Britain remain in work.', ' Steven Cameron, the pensions director at Aegon, said: We have a record number of over-50s in the workforce, with this age group making up almost a third of all workers.', ' Older workers make an extremely valuable contribution to the economy.However, we should remember that the path to retirement isn 't always a smooth one.'",
+        "numberPosts": " 3 comments ",
+        "srcType": " text ",
+        "nameNewspaper": " Daily Express ",
+        "socioLingVar": "Age - General",
+        "listEvents": "  ",
+        "articleKeywords": "  ",
+        "keywords": "Ageist",
+        "commentsOpen": " yes "
+    },
+    "commentThread": [
+        {
+            "id": "2",
+            "user": "Jager",
+            "date": "4\u00a0Mar ",
+            "timestamp": "NA",
+            "commentText": "And you can't even go to university when you retire as they operate <b> ageist </b>entry policies. Isn't that right Birmingham &amp; Sheffield universities ?",
+            "likes": 20,
+            "hasReplies": false,
+            "numberOfReplies": 0,
+            "replies": [],
+            "keywords": [
+                "Ageist"
+            ]
+        },
+        {
+            "id": "1",
+            "user": "HenryFrazer",
+            "date": "4\u00a0Mar ",
+            "timestamp": "NA",
+            "commentText": "My spouse has the opposite problem. Mid fifties and can't find a job. The IT field is very prejudiced against older workers.",
+            "likes": 14,
+            "hasReplies": true,
+            "numberOfReplies": 1,
+            "replies": [
+                {
+                    "id": "200",
+                    "user": "(null)",
+                    "date": "(null)",
+                    "timestamp": "NA",
+                    "commentText": "(null)",
+                    "likes": 0,
+                    "hasReplies": true,
+                    "numberOfReplies": 1,
+                    "replies": [
+                        {
+                            "id": "201",
+                            "user": "(null)",
+                            "date": "4\u00a0Mar ",
+                            "timestamp": "NA",
+                            "commentText": "My spouse has tried the \"consulting\" angle and was undercut by foreign workers.",
+                            "likes": 1,
+                            "hasReplies": false,
+                            "numberOfReplies": 0,
+                            "replies": []
+                        }
+                    ],
+                    "keywords": []
+                }
+            ],
+            "keywords": []
+        }
+    ]
+}
